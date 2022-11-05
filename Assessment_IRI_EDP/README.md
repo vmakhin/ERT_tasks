@@ -40,9 +40,8 @@
       
 <span style="color:red">*ALTERNATIVELY ONE COULD DOWNLOAD FILES FOR IRI PROJECT MANUALLY*</span>. 
     
-**THIS STEP Could Be Skipped Until The  Section of This REAMME file** 
-      
-**DOWNLOAD and CREATE OBJECT FILE gnuplot_i.o  FROM gnuplot_i.c and gnuplot_i.h files** 
+**THIS STEP Could Be Skipped Until The  Section of This README file  
+DOWNLOAD and CREATE OBJECT FILE gnuplot_i.o  FROM gnuplot_i.c and gnuplot_i.h files** 
       
 #### On the first step one should download iri2016 model 
      from International Reference Ionosphere webpage  irimodel.org [iri2016 model](http://irimodel.org/IRI-2016/). 
