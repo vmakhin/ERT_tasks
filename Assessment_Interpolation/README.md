@@ -45,4 +45,4 @@ This method involves coordinates of points with known values and whole set of va
 
 and Fig.5 3D visualization of interpolation
 
-<img src="snaps_top_nearest.png"  alt="drawing"  width="400"  height="400"/>
+<img src="snaps__top_nearest.png"  alt="drawing"  width="400"  height="400"/>
