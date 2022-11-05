@@ -32,10 +32,9 @@ This approach doesn’t consider values outside Delaunay triangles.
 Another limitation of this approach is very limited extrapolation capabilities
  outside area covered by triangles.
  
-### Second approach I used was based on applying nearest analysis with nearest approximation
-with original kriging method with spherical variogram model.
+### Second approach I used was based on applying nearest analysis with original kriging method with spherical variogram model.
 
-I used publicly available Python tool PyKrige.
+I used publicly available Python tool **PyKrige.**
 
 This method involves coordinates of points with known values and whole set of values
  in these points to create interpolation object over whole rectangular area.
@@ -46,4 +45,4 @@ This method involves coordinates of points with known values and whole set of va
 
 and Fig.5 3D visualization of interpolation
 
-<img src="snaps_top_neares.png"  alt="drawing"  width="400"  height="400"/>
+<img src="snaps_top_nearest.png"  alt="drawing"  width="400"  height="400"/>
