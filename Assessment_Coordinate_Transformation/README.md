@@ -1,4 +1,4 @@
-### Assessment Coordinate Transformation: Implement coordinate conversion utilities that can convert radar coordinates (bearing, range) to GIS coordinates (lat, lon) and vice versa in C. The header declaration could be the following or your own design. 
+#### Assessment Coordinate Transformation: Implement coordinate conversion utilities that can convert radar coordinates (bearing, range) to GIS coordinates (lat, lon) and vice versa in C. The header declaration could be the following or your own design. 
 ```
 int GIS2Radar(double *range, 
 	      double *bearing, 
@@ -24,13 +24,10 @@ Final: Puerto Rico, lat: long: 18N, 66W)
 
 #### SOLUTION
 
-To transform GIS to radar coordinates we created two functions
+To transform GIS to radar coordinates we created two functions in C.
 
-Using required parameters we can calculate coordinate transformation
+Using required parameters we can calculate coordinates transformation from GIS to radar and radar to GIS
 
-To transform GIS to radar coordinates we created two functions
-
-Using required parameters we can calculate coordinate transformation
 ```
 [userdir]$ make coord_trans
 ```
