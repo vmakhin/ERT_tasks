@@ -10,12 +10,12 @@ For the solution of this problem, I used Python language and third-party tools.
 I applied several methods to solve this problem.
 On the first approach I applied Delaunay triangulation from Scipy library.
 Point Locations are shown is on Fig.1
-
+<img src="NevsH.png"  alt="drawing"  width="400"  height="400"/> 
 
 Using area coordinates inside each triangle and values at the corners of
  triangles with application of linear interpolation function I got first result
 on Fig2.
-
+<img src="NevsH.png"  alt="drawing"  width="400"  height="400"/> 
 
 This approach gives very rough representation of variable Value. 
 This approach doesn’t consider values outside Delaunay triangles.
@@ -27,4 +27,4 @@ I used publicly available Python tool PyKrige.
 This method involves coordinates of points with known values and whole set of values
  in these points to create interpolation object over whole rectangular area.
  On Fig.3 we can see final result of our application of kriging procedure
-  
+ <img src="NevsH.png"  alt="drawing"  width="400"  height="400"/> 
