@@ -28,12 +28,12 @@ Transport a square wave across a 1-D structured grid.
 
 After step 5 file with name densityvstime.txt will be generated.
 
-## CREATE gif animated movie type:
+#### CREATE gif animated movie type:
 ```
 [userdir]$gnuplot < gif_animation_density.gnu
 ```
 > To produce densityvsx.gif file for the 6 sec as requested in this task this uses animate.gnu file also 
 
-Animation of Density Spatial Profile vs Time 
+Animation of Density Spatial Profile vs Time until 6 sec  
 
 <img src="densityvsx.gif"  alt="drawing"  width="500"  height="500"/>
