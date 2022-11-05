@@ -33,3 +33,4 @@ After step 5 file with name densityvstime.txt will be generated.
 
 Animation of Density Spatial Profile vs Time 
 
+<img src="snaps__top_nearest.png"  alt="drawing"  width="500"  height="500"/>
