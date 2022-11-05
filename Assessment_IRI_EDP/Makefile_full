@@ -1,0 +1,71 @@
+fortran_files = cira.for igrf.for iridreg.for irifun.for irisub.for iritec.for iriflip.for
+
+f77flags = -std=legacy -w -g -O2 -fbacktrace -ff2c -fno-automatic -fPIC
+
+create_shared_lib77:
+
+	gfortran $(f77flags) -shared  -o libiriv77.so -fPIC cira.for igrf.for iridreg.for irifun.for irisub.for iritec.for iriflip.for 
+
+iri_driver_mainc:
+
+	gcc -g -pedantic -std=c99 -c iri_driver_main.c 
+
+test_gfortranmain:
+	
+	gfortran $(f77flags)  -o test_gfortranmain.out iri_driver_sub.for  gnuplot_i.o iri_driver_main.o $(fortran_files) /home/vmakhin/ERTtask1/Task1/iri_debug/libiriv8.so /usr/local/lib/libf2c.a  -lm
+
+test_gfortran:
+	
+	gfortran $(f77flags)  -o test_gfortran.out iri_driver.for $(fortran_files) /home/vmakhin/ERTtask1/Task1/iri_debug/libiriv8.so /usr/local/lib/libf2c.a  -lm
+
+test_gfortranc:
+
+	gfortran $(f77flags)  -o test_gfortranc.out iri_driver.o $(fortran_files) /home/vmakhin/ERTtask1/Task1/iri_debug/libiriv8.so /usr/local/lib/libf2c.a  -lm
+
+create_shared_lib8:
+
+	gfortran $(f77flags) -shared  -o libiriv8.so -fPIC cira.for igrf.for iridreg.for irifun.for irisub.for iritec.for iriflip.for 
+
+test_gcc:
+
+	gcc -o test_gcc.x simple_iri_driver.o /home/vmakhin/ERTtask1/Task1/iri_debug/libiriv8.so /usr/local/lib/libf2c.a  -lm -lgfortran
+
+iri_gcc:
+
+	gcc -g -o iritest_gcc.out iritesttoc.o /home/vmakhin/ERTtask1/Task1/iri_debug/libiriv8.so /usr/local/lib/libf2c.a  -lm -lgfortran
+
+iri_driver_gcc:
+
+	gcc -g -o iri_driver_gcc.out iri_driver.c /home/vmakhin/ERTtask1/Task1/iri_debug/libiriv8.so /usr/local/lib/libf2c.a  -lm -lgfortran
+
+simple_iri_driver:
+
+	gcc -c simple_iri_driver.c 
+
+iritesttoc:
+
+	gcc -g -pedantic -std=c99 -c iritesttoc.c 
+
+iri_driver:
+
+	gcc -g -pedantic -std=c99 -c iri_driver.c 
+
+#iri_driver_mainc:
+#
+	gcc -g -pedantic -std=c99 -c iri_driver_main.c 
+
+iri_driver_gcco:
+
+	gcc -g -o iri_driver_gcco.out iri_driver.o /home/vmakhin/ERTtask1/Task1/iri_debug/libiriv8.so /usr/local/lib/libf2c.a  -lm -lgfortran
+
+iritest:
+
+	gfortran $(f77flags)  -o iritest.out iritest.for $(fortran_files) /home/vmakhin/ERTtask1/Task1/iri_debug/libiriv8.so /usr/local/lib/libf2c.a  -lm
+
+test_gfortransub:
+	
+	gfortran $(f77flags)  -o test_gfortransub.out iri_driver_sub.for iri_driver_main.for $(fortran_files) /home/vmakhin/ERTtask1/Task1/iri_debug/libiriv8.so /usr/local/lib/libf2c.a  -lm
+
+test_gfortranmain:
+	
+	gfortran $(f77flags)  -o test_gfortranmain.out iri_driver_sub.for  gnuplot_i.o iri_driver_main.o $(fortran_files) /home/vmakhin/ERTtask1/Task1/iri_debug/libiriv8.so /usr/local/lib/libf2c.a  -lm
