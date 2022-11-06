@@ -6,6 +6,6 @@
 
 #### For the solution of this problem, I applied scipy.convolution2D function
 
-Result is shown on Fig.1
+The result is shown on Fig.1
 
 <img src="assessment_convolution.png"  alt="drawing"  width="400"  height="400"/> 
