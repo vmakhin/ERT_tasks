@@ -15,7 +15,7 @@
       
 > We created a set of scripts which allows users  **download necessary files, compile them, link and create excecutables** 
       
-###### Requirements 
+###### System Requirements 
       
      1. Linux CENTOS 7 
      2. GCC (gcc and gfortran compilers) 
@@ -24,39 +24,39 @@
      4. gnuplot_i ANSI C interface to Gnuplot (installed by using included bash scripts) 
      5. wget utility 
       
-** Get Fortran Files of IRI Project Using Created in This Project bash script ** 
+** Get Fortran Files of IRI Project Using the bash script Created in This Project  ** 
       
 ** Set execute permission to the script ** 
 ``` 
      [userdir]$chmod +x download_iri.sh 
 ``` 
-##### Run script 
+##### Run the script 
 ``` 
      [userdir]$./download_iri.sh 
 ``` 
       
 **After successful run of this script all files  
-     for Fortran iri project will be in current folder ** 
+     for Fortran iri project will be in the current folder ** 
       
 <span style="color:red">*ALTERNATIVELY ONE COULD DOWNLOAD FILES FOR IRI PROJECT MANUALLY*</span>. 
     
 **THIS STEP Could Be Skipped Until The  Section of This README file  
 DOWNLOAD and CREATE OBJECT FILE gnuplot_i.o  FROM gnuplot_i.c and gnuplot_i.h files** 
       
-#### On the first step one should download iri2016 model 
+#### One should download iri2016 Fortran model 
      from International Reference Ionosphere webpage  irimodel.org [iri2016 model](http://irimodel.org/IRI-2016/). 
       
-**Below is detailed description what script download_iri.sh does** 
+**The detailed description of what the script download_iri.sh does is presented below** 
       
-Using ***wget*** utility download ***00_iri.tar*** file with iri2016 model 
-      typing on Linux computer line: 
+One can use ***wget*** utility to download ***00_iri.tar*** file with iri2016 model 
+      by typing on Linux computer line: 
 ``` 
      [userdir]$ wget https://irimodel.org/IRI-2016/00_iri.tar  
 ``` 
       
      One will see output similar to this: 
 ``` 
-      
+   
      --2022-11-03 20:41:08--  https://irimodel.org/IRI-2016/00_iri.tar 
      Resolving irimodel.org (irimodel.org)... 216.194.169.102 
      Connecting to irimodel.org (irimodel.org)|216.194.169.102|:443... connected. 
@@ -68,17 +68,17 @@ Using ***wget*** utility download ***00_iri.tar*** file with iri2016 model
       
      2022-11-03 20:41:09 (8.62 MB/s) - ‘00_iri.tar’ saved [3512320/3512320] 
 ``` 
-##### Check if file _00_iri.tar_ is in the folder 
+##### Check if file _00_iri.tar appeared in the folder 
 ```  
      [userdir]$ ls 
       
      00_iri.tar  README.md 
 ``` 
-##### Untar (extract files) files from  this file using command: 
+##### Untar (extract) files from  00_iri.tar file using the following command: 
 ``` 
      [userdir]$ tar -xvf 00_iri.tar 
 ``` 
-***One will see list of files after extraction of files from tar file*** 
+***One will see a list of files after the extraction from tar file*** 
 ``` 
      [userdir]$ ls 
 ``` 
@@ -90,9 +90,9 @@ Using ***wget*** utility download ***00_iri.tar*** file with iri2016 model
      cira.for                dgrf1965.dat  dgrf1990.dat  dgrf2015.dat  iriflip.for    iritec.for        mcsat14.dat  mcsat19.dat 
 ``` 
       
-##### Inside the **00readme.txt** one can find full description of the Fortran subroutines and extracted data files 
+##### Inside the **00readme.txt** one can find the full description of the Fortran subroutines and the extracted data files 
       
-_It is also required to download additional files:_ 
+_It is also required to download some additional files:_ 
       
 _at http://irimodel.org/indices/:_ 
       
@@ -126,12 +126,12 @@ Themens) as described on irimodel.org.
 ``` 
 <span style="color:red">*END of SECTION of DOWNLOAD FILES FOR IRI FORTRAN PROJECT MANUALLY*</span>. 
       
-#### Download and Create Object File **gnuplot_i.o**  using gnuplot_i.c and gnuplot_i.h files from gnuplot_i distribution, 
+#### Download and Create the Object File **gnuplot_i.o**  using gnuplot_i.c function  and gnuplot_i.h header files from gnuplot_i distribution, 
 ``` 
      [userdir]$ download_gnuplot_i.sh 
 ``` 
-     This script downloads from  [gnuplot_i] web page gnuplot_i ANSI C **source code**, 
-**compile** it and creates **gnuplot_i.o** object file 
+#### This script downloads from  [gnuplot_i] web page gnuplot_i ANSI C **source code**, 
+**compiles** it and creates **gnuplot_i.o** object file 
       
      It will create folder with name ***gnuplot_i_iri*** 
      with gnuplot_i.o and gnuplot_i.h files which will be used to create ***gnuplot*** charts 
@@ -139,67 +139,67 @@ Themens) as described on irimodel.org.
       
 #### Generate IRI2016 code running and plotting gnuplot of DENSITY vs HEIGHT 
       
-     Copy from subfolder iri_driver two files to main folder: 
+>Copy from subfolder iri_driver two files to main folder: 
 ***iri_driver_main.c and iri_driver_sub.for*** 
 ``` 
      [userdir]$cp iri_driver/iri_driver_main.c  
      [userdir]$cp iri_driver/iri_driver_sub.for  
 ``` 
-     After that run three make commanda: 
+     After that run the three make commands: 
       
 ##### Create SHARED IRI library from Fortran subroutines 
 ``` 
      [userdir]$make create_shared_lib77 
 ``` 
-#### Create object file for function iri_driver_main.c with ANSI C request to plot GNUPLOT chart 
+#### Create the object file for function iri_driver_main.c with ANSI C request to plot GNUPLOT chart 
       
      This interface was built using gnuplot_i ANSI C interface [gnuplot_i](http://ndevilla.free.fr/gnuplot/). 
       
-     In this function  we define interaction with GNUPLOT library using gnuplot_i.o 
+     In this step  we define the interaction with GNUPLOT library using gnuplot_i.o 
      object file 
       
 ``` 
      [userdir]$make iri_driver_mainc 
 ``` 
-     #### NEXT step is to use make command to create executable: 
+#### NEXT step is to use make command to create the executable program: 
 ``` 
      [userdir]$make test_gfortranmain 
 ``` 
       
-     ##### After run this generates executable file test_gfortranmain.out 
+##### After that step generate the executable file test_gfortranmain.out 
       
-     We will run it using command: 
+#### We will run it using the command: 
 ``` 
      [userdir]$./test_gfortranmain.out 
 ``` 
      This command will call ***IRI2016 model*** and produce ***GNUPLOT chart*** 
       
-     If we use ***set terminal X11*** plot will stay open until 
-     press q on keyboard or close chart using X on the right corner of window with chart. 
+     If we use ***set terminal X11*** the plot will stay open until 
+     one presses q on keyboard or closes this chart using X on the right corner of the chart window. 
       
-     In current setup *** code will produce PNG file*** in the folder. 
+     In current setup *** code will produce PNG file*** in the current folder. 
       
-     Example of the PNG image format file generated by using gnuplot with **set terminal PNG** 
+     An example of the PNG image format file generated by using gnuplot with **set terminal PNG** is presented below
       
 <img src="NevsH.png"  alt="drawing"  width="400"  height="400"/> 
       
-     In order to produce file with image one need to change type of terminal. 
+     In order to produce the file with an image on the screen one needs to change the type of the terminal to X11. 
       
 <!-- ['Electron Density vs Altitude'](NevsH.png) --> 
       
-**This is limited version of code to produce EDP (Electron Density Profile)** 
-**for a given time and location of interest** 
+**This is a limited version of the code to produce EDP (Electron Density Profile)** 
+**for a given time and the location of interest** 
       
-     EXAMPLE of OUTPUT is NevsH.png file is in the current folder 
+## An EXAMPLE of OUTPUT is NevsH.png file is in the current folder 
       
-**WORK is IN PROGRESS to extend capabilities of this set of functions and subroutines** 
+**The WORK is IN PROGRESS to extend the capabilities of this set of functions and subroutines** 
       
 **As a Result of This project** 
      We created tar file with all script files to build IRI2016 model 
       
-     and produce chart of  Electron number density vs height from 60 to 600 km. 
+     and produce a chart of  Electron Number Density vs Altitude from 60 to 600 km. 
       
-**The users can get help with your project sending email to:** 
+**The users can get help with their projects sending email to:** 
       
      vmakhin@gmail.com 
       
