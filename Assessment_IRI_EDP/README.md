@@ -1,10 +1,10 @@
 ### Assessment IRI EDP:  
-     Create a C-based modeling and simulation program that drive IRI model Fortran code. The code should capture and generate vertical  
+     Create a C-based modeling and simulation program that drives IRI model Fortran code. The code should capture and generate vertical  
      EDP (Electron Density Profile) for a given time and location of interest.  
       
 ##### What the project does? 
       
-> Creates a C-based modeling and simulation program that drive IRI model Fortran code. C Modeling interface captures and generates DEP (Electron Density Profile) for a given time and location of interest. 
+> Creates a C-based modeling and simulation program that drives IRI model Fortran code. C Modeling interface captures and generates DEP (Electron Density Profile) for a given time and location of interest. 
       
 ###### Why the project is useful? 
       
@@ -13,7 +13,7 @@
       
 ###### How users can get started with the project? 
       
-> We created set of scripts which allow users by  using them **download necessary files, compile, link them and create excecutables** 
+> We created a set of scripts which allows users  **download necessary files, compile them, link and create excecutables** 
       
 ###### Requirements 
       
