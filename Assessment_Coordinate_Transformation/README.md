@@ -24,6 +24,11 @@ Final: Puerto Rico, lat: long: 18N, 66W)
 
 #### MY SOLUTION
 
+I checke publications and found existing solution implemented in Javascript on [1][2].
+
+I used existing JavaScript implementation of coordinate transformations to create C functions.
+
+Implemented solution is based of spherical shape of the Earth which gives according to Ref.1 0.3% of error.
 
 To transform GIS to the radar coordinates we created two functions in C.
 
@@ -50,12 +55,16 @@ glonFinal= 66.000000
 glatFinal= 18.000000
 ```
 
-<img src="aaa.png"  alt="drawing"  width="500"  height="500"/>
+**I tried to compare my results with Ref1 using provided for this task coordinates
+
+<img src="fromRef1.png"  alt="drawing"  width="500"  height="500"/>
+
+I got some discrepancy in comparison of my and published on internet results and trying to resolve them.
 
 ### References
-
-1. http://www.movable-type.co.uk/scripts/latlong.html
-
+1. https://en.wikipedia.org/wiki/Haversine_formula#cite_note-Brummelen_2013-1
+2. http://www.movable-type.co.uk/scripts/latlong.html
+3. http://www.jaimerios.com/?p=39
 
 **The users can get help with their projects sending email to:** 
       
