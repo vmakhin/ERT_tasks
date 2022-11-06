@@ -3,13 +3,15 @@ Transport a square wave across a 1-D structured grid.
 
 #### To create gif animated file using provided flux_corrected function
 
+### Solution:
+
 #### I followed next steps to create a gif animated file
 
 1. **Clean files**
 ```
 [userdir]$make clean
 ```
-2. **Create object file from flux_corrected_transport.c C file**
+2. **Create an object file from flux_corrected_transport.c C file**
 ```
 [userdir]$make flux_corrected_transport.o
 ```
@@ -17,7 +19,7 @@ Transport a square wave across a 1-D structured grid.
 ```
 [userdir]$make mainflux.o
 ```
-4. **Create executable mainflux.out**
+4. **Create the executable mainflux.out**
 ```
 [userdir]$make maneflux.out
 ```
@@ -26,14 +28,14 @@ Transport a square wave across a 1-D structured grid.
 [userdir]$./mainflux.out
 ```
 
-After step 5 file with name densityvstime.txt will be generated.
+After step 5 file with the name densityvstime.txt will be generated.
 
-#### CREATE gif animated movie type:
+#### To CREATE a gif animated movie, type on the console:
 ```
 [userdir]$gnuplot < gif_animation_density.gnu
 ```
-> To produce densityvsx.gif file for the 6 sec as requested in this task this uses animate.gnu file also 
+> This will produce a densityvsx.gif file for the 6 sec as requestedin this task; this uses an animate.gnu file  
 
-Animation of Density Spatial Profile vs Time until 6 sec  
+The animation of the Density Spatial Profile vs Time until 6 sec is presented below  
 
 <img src="densityvsx.gif"  alt="drawing"  width="500"  height="500"/>
