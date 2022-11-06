@@ -22,7 +22,8 @@ Initial: Wallops Islands, lat: 37N, long: 75W)
 
 Final: Puerto Rico, lat: long: 18N, 66W) 
 
-#### SOLUTION
+#### MY SOLUTION
+
 
 To transform GIS to the radar coordinates we created two functions in C.
 
@@ -48,6 +49,12 @@ glatFinal= 18.000000
 glonFinal= 66.000000
 glatFinal= 18.000000
 ```
+
+<img src="aaa.png"  alt="drawing"  width="500"  height="500"/>
+
+### References
+
+1. http://www.movable-type.co.uk/scripts/latlong.html
 
 
 **The users can get help with their projects sending email to:** 
