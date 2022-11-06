@@ -26,19 +26,19 @@ on Fig3.
 
 <img src="Delaunay_Linear_Interpolation.png"  alt="drawing"  width="400"  height="400"/> 
 
-### This approach gives very rough representation of variable Value. 
+### This approach gives a very rough representation of variable Value. 
 
 This approach doesn’t consider values outside Delaunay triangles.
 Another limitation of this approach is very limited extrapolation capabilities
- outside area covered by triangles.
+ outside the area covered by triangles.
  
-### Second approach I used was based on applying nearest analysis with original kriging method with spherical variogram model.
+### The second approach I used was based on applying nearest analysis with original kriging method with spherical variogram model.
 
 I used publicly available Python tool **PyKrige.**
 
-This method involves coordinates of points with known values and whole set of values
- in these points to create interpolation object over whole rectangular area.
- On Fig.4 and Fig.55 we can see final result of our application of nearest approximation
+This method involves coordinates of the points with known values and the whole set of values
+ in these points to create an interpolation object over the whole rectangular area.
+ On Fig.4 and Fig.55 we can see the final result of our application of the nearest approximation
  using kriging function
  
 <img src="assessment_interpolation.png"  alt="drawing"  width="400"  height="400"/> 
