@@ -24,9 +24,11 @@ Final: Puerto Rico, lat: long: 18N, 66W)
 
 #### SOLUTION
 
-To transform GIS to radar coordinates we created two functions in C.
+To transform GIS to the radar coordinates we created two functions in C.
 
-Using required parameters we can calculate coordinates transformation from GIS to radar and radar to GIS
+Using the required parameters (Initial: Wallops Islands, lat: 37N, long: 75W) 
+
+Final: Puerto Rico, lat: long: 18N, 66W)) we can calculate coordinates transformation from GIS to radar and radar to GIS
 
 ```
 [userdir]$ make coord_trans
@@ -35,7 +37,7 @@ Using required parameters we can calculate coordinates transformation from GIS t
 ```
 [userdir]$./coord_trans.out
 ```
-After run we should got similar output 
+After the run we got the following output 
 ```
 glonInit= 75.000000
 glatInit= 37.000000
