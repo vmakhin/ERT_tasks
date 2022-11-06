@@ -92,4 +92,11 @@ The animation of the Density Spatial Profile vs Time until 10 sec is presented b
 4. J.P. Boris, A.M. Landsberg, E.S. Oran, J.H. Gardner, LCPFCT-A Flux-Corrected Transport Algorithm for Solving Generalized
 Continuity Equations,  APril 1993, Report NRL/MR/6410--93-7192
 
-
+**The users can get help with their projects sending email to:** 
+      
+     vmakhin@gmail.com 
+      
+**Who maintains and contributes to the project:** 
+      
+     Volodymyr Makhin,  
+     Sr. Computational Physicist 
