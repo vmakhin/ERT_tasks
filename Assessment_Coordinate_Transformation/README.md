@@ -22,9 +22,44 @@ Initial: Wallops Islands, lat: 37N, long: 75W)
 
 Final: Puerto Rico, lat: long: 18N, 66W) 
 
-#### MY SOLUTION
+#### MY SOLUTION based on [1]
 
-I checke publications and found existing solution implemented in Javascript on [1][2].
+I checke publications, internet and found coordinate transformations pieces of implemented in Javascript, C on [1][2][3].
+
+#### Solution based on use of Haversine formula [1]
+
+>The haversine formula determines the great-circle distance between two points on a sphere given their longitudes and latitudes. Important in navigation, >it is a special case of a more general formula in spherical trigonometry, the law of haversines, that relates the sides and angles of spherical triangles.[1]
+
+### Haversine is defined by 
+
+$hav(\theta) = sin^2(\frac{\theta} {2})$
+
+Let the central angle θ between any two points on a sphere be:
+
+$\theta ={\frac {d}{r}} $
+
+where:
+
+d is the distance between the two points along a great circle of the sphere (see spherical distance),
+r is the radius of the sphere.
+
+The haversine formula allows the haversine of θ (that is, hav(θ)) to be computed directly from the latitude (represented by φ) and longitude (represented by λ) of the two points without using cosines which cause resolution degradation at small angles
+
+$hav(\theta ) =  hav(\varphi _{2}-\varphi _{1}) + (1- hav(\varphi _{1}-\varphi _{2})- hav(\varphi _{1}+\varphi _{2})) * hav(\lambda _{2}-\lambda _{1})$
+
+where
+
+$\varphi _1, \varphi _2$  are the **latitude** of point 1 and **latitude** of point 2,
+
+$\lambda _1, \lambda _2$  are the **longitude** of point 1 and **longitude** of point 2.
+
+Finally, the haversine function hav(θ), applied above to both the central angle θ and the differences in latitude and longitude, is
+
+$hav(\theta) = \sin^{2} (\frac {\theta} {2}  ) = \frac {1-\cos(\theta)} {2} $
+
+#### Asssumptions of Earth shape spherical with radius = 6371e3 m ( in case of elipsoidal Earth sahe model calculations are  more complicated).
+
+In this coordinate transformation model 
 
 I used existing JavaScript implementation of coordinate transformations to create C functions.
 
