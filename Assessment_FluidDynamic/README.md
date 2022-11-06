@@ -1,19 +1,28 @@
 ## Assessment of modeling fluid dynamic (advanced and hard): 
 Transport a square wave across a 1-D structured grid.  Use operator splitting for the continuity and momentum equations with no forcing terms:
+
 ∂_t ρ+ ∂_x (ρv)=0
+
 ∂_t (ρv)+ ∂_x (ρvv)=0
+
 Instructions:
-Use a structured grid that has 1000 grid cells, with a cell width of 1.0 meters.  All variable values are stored in the cell centers
-Width of a square wave should cover at least ten grid cells
+
+Use a structured grid that has 1000 grid cells, with a cell width of 1.0 meters.  All variable values are stored in the cell centers.
+Width of a square wave should cover at least ten grid cells. 
 Recommend testing with a square wave that covers 100 grid cells (see example gif below)
-Use a CFL condition where C_max<0.5 
-Use positive velocity of 10.0 m/s
-Use a density value of 25.0
+
+Use a CFL condition where C_max<0.5 .
+Use positive velocity of 10.0 m/s. 
+Use a density value of 25.0 .
 Only transport density values > 1.0e-6
+
 Use the given C code that implements the flux-correct method for transporting quantities
+
 Compile C code using a Makefile
+
 Create a gif visualization that shows 10 seconds of simulation time
 
+## My solution of this task
 
 ### System of continuity and momentum equations:
 
@@ -23,29 +32,46 @@ $\frac{\partial \rho v}{\partial t} + \frac{\partial (\rho v v)}{\partial x} = 0
 
 ### To solve this system of equations using flux-correction method I went through several publications [1],[2],[3],[4]
 
+#### I created Makefile (included in the folder):
 
-#### I followed next steps to create a gif animated file using provided flux_corrected_transport.c function
+```
+all: mainflux.out
 
-1. **Create an object file from flux_corrected_transport.c C file**
+mainflux.out: mainflux.o
+	 gcc -o mainflux.out mainflux.o flux_corrected_transport.o -I ./flux_corrected_transport.h
+
+mainflux.o: mainflux.c 
+	 gcc -c mainflux.c -I. flux_corrected_transport.h
+     
+flux_corrected_transport.o: flux_corrected_transport.c
+	 gcc -c -std=gnu99 flux_corrected_transport.c -I. flux_corrected_transport.h
+
+clean:
+	 rm mainflux.o flux_corrected_transport.o mainflux.out
+```
+
+#### I followed next steps to create a gif animated file using provided _flux_corrected_transport.c_ function
+
+1. **Created an object file from flux_corrected_transport.c C file**
 ```
 [userdir]$make flux_corrected_transport.o
 ```
-2. **Create mainflux.o object file**
+2. **Created mainflux.o object file**
 ```
 [userdir]$make mainflux.o
 ```
-3. **Create the executable mainflux.out**
+3. **Created the executable mainflux.out**
 ```
 [userdir]$make maneflux.out
 ```
-4. **Run mainflux.out executable file**
+4. **Ran a mainflux.out executable file**
 ```
 [userdir]$./mainflux.out
 ```
 
-After step 4 file with the name densityvstime.txt will be generated.
+After step 4 file with the name densityvstime.txt was generated.
 
-#### To CREATE a gif animated movie, type on the console:
+#### To CREATE a gif animated movie, I typed on the console:
 ```
 [userdir]$gnuplot < gif_animation_density.gnu
 ```
