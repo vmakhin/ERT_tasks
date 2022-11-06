@@ -28,7 +28,7 @@ I checke publications, internet and found coordinate transformations pieces of i
 
 #### Solution based on use of Haversine formula [1]
 
->The haversine formula determines the great-circle distance between two points on a sphere given their longitudes and latitudes. Important in navigation, >it is a special case of a more general formula in spherical trigonometry, the law of haversines, that relates the sides and angles of spherical triangles.[1]
+>The haversine formula determines the great-circle distance between two points on a sphere given their longitudes and latitudes. Important in navigation, it is a special case of a more general formula in spherical trigonometry, the law of haversines, that relates the sides and angles of spherical triangles.[1]
 
 ### Haversine is defined by 
 
@@ -59,7 +59,7 @@ $hav(\theta) = \sin^{2} (\frac {\theta} {2}  ) = \frac {1-\cos(\theta)} {2} $
 
 To find distanse between two points one can use  (inverse haversine)
 
-$d\ = r\ archav(h) = 2\ r\ arcsin(\sqrt{h})$
+$d\ = r\ archav(h) = 2\ r\ \arcsin(\sqrt{h})$
 
 or explicitly
 
