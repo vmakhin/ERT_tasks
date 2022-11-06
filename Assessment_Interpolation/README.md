@@ -8,7 +8,7 @@ the given point location values to a structured grid of longitude
 
 ### Solution:
 
-For the solution of this problem, I used Python language and third-party tools.
+For the solution of this problem, I used  language Python and third-party tools.
 I applied several methods to solve this problem.
 
 Point locations are shown on Fig1.
