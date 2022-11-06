@@ -32,7 +32,7 @@ I checke publications, internet and found coordinate transformations pieces of i
 
 ### Haversine is defined by 
 
-$hav(\theta) = sin^2(\frac{\theta} {2})$
+$hav(\theta) = \sin^2(\frac{\theta} {2})$
 
 Let the central angle θ between any two points on a sphere be:
 
@@ -57,13 +57,23 @@ Finally, the haversine function hav(θ), applied above to both the central angle
 
 $hav(\theta) = \sin^{2} (\frac {\theta} {2}  ) = \frac {1-\cos(\theta)} {2} $
 
-#### Asssumptions of Earth shape spherical with radius = 6371e3 m ( in case of elipsoidal Earth sahe model calculations are  more complicated).
+To find distanse between two points one can use  (inverse haversine)
+
+$d\ = r\ archav(h) = 2\ r\ arcsin(\sqrt{h})$
+
+or explicitly
+
+$d\ =\  2r\ \arcsin(  \sqrt{\sin^2(\frac {\varphi _2-\varphi _1}{2}) + \cos(\varphi _1) \cdot \cos(\varphi _2) \cdot \sin^2(\frac {\lambda _2-\lambda _1}{2}) }    )    $
+
+
+
+#### Asssumptions of Earth shape spherical with radius = 6371e3 m ( in case of elipsoidal Earth sahe model calculations are  more complicated [4]).
 
 In this coordinate transformation model 
 
 I used existing JavaScript implementation of coordinate transformations to create C functions.
 
-Implemented solution is based of spherical shape of the Earth which gives according to Ref.1 0.3% of error.
+Implemented solution is based of spherical shape of the Earth which gives according to Ref.1 0.5% of error.
 
 To transform GIS to the radar coordinates we created two functions in C.
 
@@ -100,6 +110,7 @@ I got some discrepancy in comparison of my and published on internet results and
 1. https://en.wikipedia.org/wiki/Haversine_formula#cite_note-Brummelen_2013-1
 2. http://www.movable-type.co.uk/scripts/latlong.html
 3. http://www.jaimerios.com/?p=39
+4. https://en.wikipedia.org/wiki/Vincenty%27s_formulae
 
 **The users can get help with their projects sending email to:** 
       
