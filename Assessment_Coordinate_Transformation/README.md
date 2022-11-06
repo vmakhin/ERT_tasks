@@ -48,3 +48,13 @@ glatFinal= 18.000000
 glonFinal= 66.000000
 glatFinal= 18.000000
 ```
+
+
+**The users can get help with their projects sending email to:** 
+      
+     vmakhin@gmail.com 
+      
+**Who maintains and contributes to the project:** 
+      
+     Volodymyr Makhin,  
+     Sr. Computational Physicist 
