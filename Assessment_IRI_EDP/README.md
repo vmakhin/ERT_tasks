@@ -137,7 +137,7 @@ Themens) as described on irimodel.org.
      with gnuplot_i.o and gnuplot_i.h files which will be used to create ***gnuplot*** charts 
      with iri generated data 
       
-#### Generate IRI2016 code running and plotting gnuplot of DENSITY vs HEIGHT 
+#### Generate IRI2016 code running and plotting gnuplot of Density vs Altitude 
       
 >Copy from subfolder iri_driver two files to main folder: 
 ***iri_driver_main.c and iri_driver_sub.for*** 
@@ -190,7 +190,7 @@ Themens) as described on irimodel.org.
 **This is a limited version of the code to produce EDP (Electron Density Profile)** 
 **for a given time and the location of interest** 
       
-## An EXAMPLE of OUTPUT is NevsH.png file is in the current folder 
+#### An EXAMPLE of OUTPUT is NevsH.png file is in the current folder 
       
 **The WORK is IN PROGRESS to extend the capabilities of this set of functions and subroutines** 
       
