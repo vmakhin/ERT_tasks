@@ -79,7 +79,7 @@ Using the required parameters (Initial: Wallops Islands, lat: 37N, long: 75W)
 
 Final: Puerto Rico, lat: long: 18N, 66W)) we can calculate coordinates transformation from GIS to radar and radar to GIS
 
-### I created Makefile to compile, link and execute functions GIS2Radar and RtoG using two test programs: test_GIS2Ragar.c and test_RtoG.c
+#### I created Makefile to compile, link and execute functions GIS2Radar and RtoG using two test programs: test_GIS2Radar.c and test_RtoG.c
 
 Below Make file is listed:
 
