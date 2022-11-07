@@ -1,4 +1,7 @@
-#### Assessment Coordinate Transformation: Implement coordinate conversion utilities that can convert radar coordinates (bearing, range) to GIS coordinates (lat, lon) and vice versa in C. The header declaration could be the following or your own design. 
+#### Assessment Coordinate Transformation:
+
+Implement coordinate conversion utilities that can convert radar coordinates (bearing, range) to GIS coordinates (lat, lon) and vice versa in C. The header declaration could be the following or your own design. 
+
 ```
 int GIS2Radar(double *range, 
 	      double *bearing, 
@@ -87,6 +90,7 @@ all: test_GIS2Radar.out, test_RtoG.out
 
 #### GIS2Radar section of makefile
 
+```
 test_GIS2Radar.out: test_GIS2Radar.o
 	 gcc -o test_GIS2Radar.out test_GIS2Radar.o GIS2Radar.o -I ./GIS2Radar.h -lm
 
@@ -110,6 +114,7 @@ RtoG.o: RtoG.c
 
 clean:
 	 rm GIS2Radar.o RtoG.o  mainflux.out
+```
 
 #### Using this Makefile one can create executables of test_RtoG.out and test_GIS2Radar.out
 
@@ -144,7 +149,7 @@ Final: Puerto Rico, lat: long: 18N, 66W)
 	
 #### The example of input GIS Coordinates and output of Radar Coordinates is shown below
 
-
+```
 [vmakhin@localhost Assessment_Coordinate_Transformation]$ ./test_GIS2Radar.out
 
 Initial Point GIS coordinates (latitude and longitude):
@@ -173,15 +178,11 @@ glonFinal= -66.000000 , in degrees
 range= 2288.663608 , in km
 
 bearing= 154.963217 , in degrees
-
-
-[vmakhin@localhost Assessment_Coordinate_Transformation]$
+```
 
 **I compared my results with Ref[2]. using provided for this task coordinates**
 
-
 #### This is an match to output from test which is available in Ref.2.
- 
 
 <img src="fromRef1.png"  alt="drawing"  width="200"  height="200"/>
 
@@ -227,7 +228,6 @@ glatFinal= 18.000000 , in degrees
 glonFinal= -66.000000 , in degrees
 
 ```
-
 
 My results match to test results from utility on Ref.2.
 
