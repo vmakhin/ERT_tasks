@@ -83,7 +83,6 @@ Final: Puerto Rico, lat: long: 18N, 66W)) we can calculate coordinates transform
 
 Below content of the Makefile is listed:
 
-```
 all: test_GIS2Radar.out, test_RtoG.out
 
 #### GIS2Radar section of makefile
@@ -111,7 +110,6 @@ RtoG.o: RtoG.c
 
 clean:
 	 rm GIS2Radar.o RtoG.o  mainflux.out
-```
 
 #### Using this Makefile one can create executables of test_RtoG.out and test_GIS2Radar.out
 
@@ -127,22 +125,26 @@ clean:
 ```
 [userdir]$ make test_GIS2Radar.out
 ```
+
 ### Run executable
+
 ```
 [userdir]$./test_GIS2Radar.out
 ```
+
 Program will ask you to input nessessary information on the console.
 
 ```
 Initial: Wallops Islands, lat: 37N, long: 75W) 
 
 Final: Puerto Rico, lat: long: 18N, 66W)
-	```
-?Because of longitute is defined in W it should be input with minus - sign.	
+```
+
+**Because of longitute is defined in W it should be input with minus - sign.**
 	
 #### The example of input GIS Coordinates and output of Radar Coordinates is shown below
 
-```
+
 [vmakhin@localhost Assessment_Coordinate_Transformation]$ ./test_GIS2Radar.out
 
 Initial Point GIS coordinates (latitude and longitude):
@@ -174,9 +176,8 @@ bearing= 154.963217 , in degrees
 
 
 [vmakhin@localhost Assessment_Coordinate_Transformation]$
-```
 
-**I compared my results with Ref[2]. using provided for this task coordinates
+**I compared my results with Ref[2]. using provided for this task coordinates**
 
 
 #### This is an match to output from test which is available in Ref.2.
@@ -192,7 +193,7 @@ bearing= 154.963217 , in degrees
 
 ### Example of use test_RtoG is below:
 
-```
+
 [vmakhin@localhost Assessment_Coordinate_Transformation]$ ./test_RtoG.out
 
 Initial Point GIS coordinates (latitude and longitude):
@@ -227,7 +228,7 @@ glonFinal= -66.000000 , in degrees
 
 [vmakhin@localhost Assessment_Coordinate_Transformation]$
 
-```
+
 My results match to test results from utility on Ref.2.
 
 ### References
