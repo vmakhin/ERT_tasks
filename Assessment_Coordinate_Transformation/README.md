@@ -133,6 +133,13 @@ clean:
 ```
 Program will ask you to input nessessary information on the console.
 
+```
+Initial: Wallops Islands, lat: 37N, long: 75W) 
+
+Final: Puerto Rico, lat: long: 18N, 66W)
+	```
+?Because of longitute is defined in W it should be input with minus - sign.	
+	
 #### The example of input GIS Coordinates and output of Radar Coordinates is shown below
 
 ```
@@ -146,37 +153,36 @@ Input value of latitude at Initial Location(in degrees):
 glatInit= 37.000000 , in degrees
 
 Input value of longitude at Initial Location(in degrees):
-75.
+-75.
 
-glonInit= 75.000000 , in degrees
+glonInit= -75.000000 , in degrees
 
 Final Point GIS coordinates (latitude and longitude):
 
 Input value of latitude at Final Location(in degrees):
 18.
-
 glatFinal= 18.000000 , in degrees
 
 Input value of longitude at Final Location(in degrees):
-66.
+-66.
 
-glonFinal= 66.000000 , in degrees
+glonFinal= -66.000000 , in degrees
 
 range= 2288.663608 , in km
 
-bearing= 205.036783 , in degrees
+bearing= 154.963217 , in degrees
+
 
 [vmakhin@localhost Assessment_Coordinate_Transformation]$
 ```
 
 **I compared my results with Ref[2]. using provided for this task coordinates
 
-=== THIS is NOT MY results !!!! I tried to make comparison with it 
+
+#### This is an match to output from test which is available in Ref.2.
+ 
 
 <img src="fromRef1.png"  alt="drawing"  width="200"  height="200"/>
-
-I got some discrepancy in comparison of my and published on internet results and trying to resolve them.
-
 
 ### In similar way I created exceotable for test_RtoG.c and run it with commnd
 
@@ -188,6 +194,7 @@ I got some discrepancy in comparison of my and published on internet results and
 
 ```
 [vmakhin@localhost Assessment_Coordinate_Transformation]$ ./test_RtoG.out
+
 Initial Point GIS coordinates (latitude and longitude):
 
 Input value of latitude at Initial Location(in degrees):
@@ -196,30 +203,32 @@ Input value of latitude at Initial Location(in degrees):
 glatInit= 37.000000 , in degrees
 
 Input value of longitude at Initial Location(in degrees):
-75.
+-75.
 
-glonInit= 75.000000 , in degrees
+glonInit= -75.000000 , in degrees
 
 Input value of Initial Point Radar Coordinates:
 
 Input value of range at Initial Location(in m):
-2289000.
+2288663.608
 
-range= 2289000.000000 , in m
+range= 2288663.608000 , in m
 
 Input value of bearing at Initial Location(in degrees):
-155.
+154.963217
 
-bearing= 155.000000 , in degrees
+bearing= 154.963217 , in degrees
 
 Final Point GIS coordinates (latitude and longitude):
 
-glatFinal= 17.992579 , in degrees
+glatFinal= 18.000000 , in degrees
 
-glonFinal= 83.988418 , in degrees
+glonFinal= -66.000000 , in degrees
+
+[vmakhin@localhost Assessment_Coordinate_Transformation]$
 
 ```
-I have discrepancy with test and I am working on to remove discrepancy.
+My results match to test results from utility on Ref.2.
 
 ### References
 1. https://en.wikipedia.org/wiki/Haversine_formula#cite_note-Brummelen_2013-1
