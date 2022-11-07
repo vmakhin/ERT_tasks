@@ -22,6 +22,8 @@ Initial: Wallops Islands, lat: 37N, long: 75W)
 
 Final: Puerto Rico, lat: long: 18N, 66W) 
 
+<img src="maptoTaskcoord.png"  alt="drawing"  width="400"  height="400"/>
+
 #### MY SOLUTION based on [1]
 
 I checked publications, internet and found coordinate transformations pieces of implemented in Javascript, C on [1][2][3][4][5].
