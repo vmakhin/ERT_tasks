@@ -65,23 +65,21 @@ or explicitly
 
 $d\ =\  2r\ \arcsin(  \sqrt{\sin^2(\frac {\varphi _2-\varphi _1}{2}) + \cos(\varphi _1) \cdot \cos(\varphi _2) \cdot \sin^2(\frac {\lambda _2-\lambda _1}{2}) }    )    $
 
-#### Asssumptions of Earth shape spherical with radius = 6371e3 m ( in case of elipsoidal Earth sahe model calculations are  more complicated [4]).
-
-In this coordinate transformation model 
-
-I used existing JavaScript implementation of coordinate transformations to create C functions.
+#### I used the assumption that Earth's shape is spheroidal with radius = 6371e3 m ( in case of elipsoidal Earth sahe model calculations are  more complicated [4]).
 
 Implemented solution is based of spherical shape of the Earth which gives according to Ref.1 0.5% of error.
 
-To transform GIS to the radar coordinates we created two functions in C.
+I used existing JavaScript implementation of coordinate transformations to create C functions [2].
+
+To transform GIS to the radar coordinates we created two functions in C: GIS2Radar.c and RtoG.c
 
 Using the required parameters (Initial: Wallops Islands, lat: 37N, long: 75W) 
 
 Final: Puerto Rico, lat: long: 18N, 66W)) we can calculate coordinates transformation from GIS to radar and radar to GIS
 
-#### I created Makefile to compile, link and execute functions GIS2Radar and RtoG using two test programs: test_GIS2Radar.c and test_RtoG.c
+#### I created Makefile to compile, link and test both functions GIS2Radar and RtoG using two test programs: test_GIS2Radar.c and test_RtoG.c
 
-Below Make file is listed:
+Below content of the Makefile is listed:
 
 ```
 all: test_GIS2Radar.out, test_RtoG.out
@@ -113,7 +111,7 @@ clean:
 	 rm GIS2Radar.o RtoG.o  mainflux.out
 ```
 
-#### Using this Makefile one can create executables of test test_RtoG.out and test_GIS2Radar.out
+#### Using this Makefile one can create executables of test_RtoG.out and test_GIS2Radar.out
 
 **Build of test_GIS2Radar.out **
 
@@ -131,32 +129,45 @@ clean:
 ```
 [userdir]$./test_GIS2Radar.out
 ```
-Program will ask you to input nessessary information on the consol.
+Program will ask you to input nessessary information on the console.
 
-The example of input GIS Coordinates and output of Radar Coordinates is shown below
+#### The example of input GIS Coordinates and output of Radar Coordinates is shown below
 
 ```
 [vmakhin@localhost Assessment_Coordinate_Transformation]$ ./test_GIS2Radar.out
+
 Initial Point GIS coordinates (latitude and longitude):
+
 Input value of latitude at Initial Location(in degrees):
 37.
+
 glatInit= 37.000000 , in degrees
+
 Input value of longitude at Initial Location(in degrees):
 75.
+
 glonInit= 75.000000 , in degrees
+
 Final Point GIS coordinates (latitude and longitude):
+
 Input value of latitude at Final Location(in degrees):
 18.
+
 glatFinal= 18.000000 , in degrees
+
 Input value of longitude at Final Location(in degrees):
 66.
+
 glonFinal= 66.000000 , in degrees
+
 range= 2288.663608 , in km
+
 bearing= 205.036783 , in degrees
+
 [vmakhin@localhost Assessment_Coordinate_Transformation]$
 ```
 
-**I tried to compare my results with Ref1 using provided for this task coordinates
+**I tried to compare my results with Ref2. using provided for this task coordinates
 
 <img src="fromRef1.png"  alt="drawing"  width="500"  height="500"/>
 
