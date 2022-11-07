@@ -185,7 +185,7 @@ bearing= 154.963217 , in degrees
 
 <img src="fromRef1.png"  alt="drawing"  width="200"  height="200"/>
 
-### In similar way I created exceotable for test_RtoG.c and run it with commnd
+### In similar way I created excecutable for test_RtoG.c and run it with command
 
 '''
 [userder]$./test_RtoG.out
@@ -193,7 +193,7 @@ bearing= 154.963217 , in degrees
 
 ### Example of use test_RtoG is below:
 
-
+'''
 [vmakhin@localhost Assessment_Coordinate_Transformation]$ ./test_RtoG.out
 
 Initial Point GIS coordinates (latitude and longitude):
@@ -226,7 +226,7 @@ glatFinal= 18.000000 , in degrees
 
 glonFinal= -66.000000 , in degrees
 
-[vmakhin@localhost Assessment_Coordinate_Transformation]$
+```
 
 
 My results match to test results from utility on Ref.2.
