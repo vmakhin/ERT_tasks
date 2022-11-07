@@ -111,6 +111,7 @@ I got some discrepancy in comparison of my and published on internet results and
 2. http://www.movable-type.co.uk/scripts/latlong.html
 3. http://www.jaimerios.com/?p=39
 4. https://en.wikipedia.org/wiki/Vincenty%27s_formulae
+5. Ed Williams, Aviation Formulary, V.1.5, http://www.edwilliams.org/avform147.htm
 
 **The users can get help with their projects sending email to:** 
       
