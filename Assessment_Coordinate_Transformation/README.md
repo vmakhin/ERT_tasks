@@ -24,9 +24,9 @@ Final: Puerto Rico, lat: long: 18N, 66W)
 
 #### MY SOLUTION based on [1]
 
-I checke publications, internet and found coordinate transformations pieces of implemented in Javascript, C on [1][2][3].
+I checked publications, internet and found coordinate transformations pieces of implemented in Javascript, C on [1][2][3][4][5].
 
-#### Solution based on use of Haversine formula [1]
+#### My solution based on use of the Haversine formula [1]
 
 >The haversine formula determines the great-circle distance between two points on a sphere given their longitudes and latitudes. Important in navigation, it is a special case of a more general formula in spherical trigonometry, the law of haversines, that relates the sides and angles of spherical triangles.[1]
 
@@ -64,8 +64,6 @@ $d\ = r\ archav(h) = 2\ r\ \arcsin(\sqrt{h})$
 or explicitly
 
 $d\ =\  2r\ \arcsin(  \sqrt{\sin^2(\frac {\varphi _2-\varphi _1}{2}) + \cos(\varphi _1) \cdot \cos(\varphi _2) \cdot \sin^2(\frac {\lambda _2-\lambda _1}{2}) }    )    $
-
-
 
 #### Asssumptions of Earth shape spherical with radius = 6371e3 m ( in case of elipsoidal Earth sahe model calculations are  more complicated [4]).
 
