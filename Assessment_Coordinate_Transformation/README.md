@@ -173,6 +173,50 @@ bearing= 205.036783 , in degrees
 
 I got some discrepancy in comparison of my and published on internet results and trying to resolve them.
 
+
+### In similar way I created exceotable for test_RtoG.c and run it with commnd
+
+'''
+[userder]$./test_RtoG.out
+```
+
+### Example of use test_RtoG is below:
+
+```
+[vmakhin@localhost Assessment_Coordinate_Transformation]$ ./test_RtoG.out
+Initial Point GIS coordinates (latitude and longitude):
+
+Input value of latitude at Initial Location(in degrees):
+37.
+
+glatInit= 37.000000 , in degrees
+
+Input value of longitude at Initial Location(in degrees):
+75.
+
+glonInit= 75.000000 , in degrees
+
+Input value of Initial Point Radar Coordinates:
+
+Input value of range at Initial Location(in m):
+2289000.
+
+range= 2289000.000000 , in m
+
+Input value of bearing at Initial Location(in degrees):
+155.
+
+bearing= 155.000000 , in degrees
+
+Final Point GIS coordinates (latitude and longitude):
+
+glatFinal= 17.992579 , in degrees
+
+glonFinal= 83.988418 , in degrees
+
+```
+I have discrepancy with test and I am working on to remove discrepancy.
+
 ### References
 1. https://en.wikipedia.org/wiki/Haversine_formula#cite_note-Brummelen_2013-1
 2. http://www.movable-type.co.uk/scripts/latlong.html
