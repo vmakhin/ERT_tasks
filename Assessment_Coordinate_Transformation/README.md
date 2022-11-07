@@ -25,7 +25,7 @@ Initial: Wallops Islands, lat: 37N, long: 75W)
 
 Final: Puerto Rico, lat: long: 18N, 66W) 
 
-<img src="maptoTaskcoord.png"  alt="drawing"  width="400"  height="400"/>
+<img src="maptoTaskcoord.png"  alt="drawing"  width="300"  height="300"/>
 
 #### MY SOLUTION based on [1]
 
