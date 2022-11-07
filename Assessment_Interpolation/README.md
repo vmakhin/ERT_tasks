@@ -11,12 +11,15 @@ the given point location values to a structured grid of longitude
 For the solution of this problem, I used  language Python and third-party tools [1].
 I applied several methods to solve this problem.
 
-Point locations are shown on Fig1.
+The point locations with known values are shown on Fig1.
+
+We need to create interpolant which covers all structured grid to extrapolate data to all red points. 
 
 <img src="plot_locations.png"  alt="drawing"  width="400"  height="400"/>
 
-On the first approach I applied Delaunay triangulation from Scipy library.
-Point Locations are shown is on Fig. 2
+#### On the first approach I applied Delaunay triangulation from Scipy library.
+
+The Delaunay triangles are shown is on Fig. 2
 
 <img src="Delaunay_Triangulation.png"  alt="drawing"  width="400"  height="400"/> 
 
@@ -26,12 +29,12 @@ Using the area coordinates inside of each triangle and values at the corners of
 
 <img src="Delaunay_Linear_Interpolation.png"  alt="drawing"  width="400"  height="400"/> 
 
-### This approach gives a very rough linear interplolation using area coordinates representation of the values on the structured grid. 
+### This approach gives a very rough linear interplolation using area coordinates within each triangle.
+The representation of the values on the structured grid using this approach unsatisfactory. 
 
 This approach doesn’t consider values outside Delaunay triangles.
 
-Another limitation of this approach is very limited extrapolation capabilities
- outside the area covered by triangles.
+The another limitation of this approach is a very limited extrapolation capabilities outside the area covered by triangles.
  
 ### The second approach I used was based on applying nearest analysis with original kriging method [3] with spherical variogram model.
 
@@ -40,7 +43,7 @@ I used publicly available Python tool **PyKrige**.
 This method involves coordinates of the points with known values and the whole set of values
  in these points to create an interpolation object over the whole rectangular area.
  
- On Fig.4 and Fig.55 we can see the final result of our application of the nearest approximation
+ On Fig.4 and Fig.5 we can see the final result of our application of the nearest approximation
  using kriging function
  
 <img src="assessment_interpolation.png"  alt="drawing"  width="400"  height="400"/> 
