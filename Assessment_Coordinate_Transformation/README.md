@@ -186,7 +186,7 @@ bearing= 154.963217 , in degrees
 
 <img src="fromRef1.png"  alt="drawing"  width="200"  height="200"/>
 
-### In similar way I created excecutable for test_RtoG.c and run it with command
+### In similar way I created excecutable for test_RtoG.c and ran it with command
 
 '''
 [userder]$./test_RtoG.out
