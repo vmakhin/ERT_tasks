@@ -167,9 +167,11 @@ bearing= 205.036783 , in degrees
 [vmakhin@localhost Assessment_Coordinate_Transformation]$
 ```
 
-**I tried to compare my results with Ref2. using provided for this task coordinates
+**I compared my results with Ref[2]. using provided for this task coordinates
 
-<img src="fromRef1.png"  alt="drawing"  width="500"  height="500"/>
+=== THIS is NOT MY results !!!! I tried to make comparison with it 
+
+<img src="fromRef1.png"  alt="drawing"  width="400"  height="400"/>
 
 I got some discrepancy in comparison of my and published on internet results and trying to resolve them.
 
