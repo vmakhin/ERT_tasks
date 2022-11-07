@@ -236,6 +236,7 @@ My results match to test results from utility on Ref.2.
 3. http://www.jaimerios.com/?p=39
 4. https://en.wikipedia.org/wiki/Vincenty%27s_formulae
 5. Ed Williams, Aviation Formulary, V.1.5, http://www.edwilliams.org/avform147.htm
+6. https://www.fcc.gov/media/radio/dms-decimal
 
 **The users can get help with their projects sending email to:** 
       
