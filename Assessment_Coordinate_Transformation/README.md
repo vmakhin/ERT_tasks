@@ -85,26 +85,77 @@ Final: Puerto Rico, lat: long: 18N, 66W)) we can calculate coordinates transform
 
 Below Make file is listed:
 
+```
+all: test_GIS2Radar.out, test_RtoG.out
+
+#### GIS2Radar section of makefile
+
+test_GIS2Radar.out: test_GIS2Radar.o
+	 gcc -o test_GIS2Radar.out test_GIS2Radar.o GIS2Radar.o -I ./GIS2Radar.h -lm
+
+test_GIS2Radar.o: test_GIS2Radar.c
+	 gcc -c test_GIS2Radar.c  -I./GIS2Radar.h
+
+GIS2Radar.o: GIS2Radar.c 
+	 gcc -c GIS2Radar.c -I. GIS2Radar.h
 
 
+#### RtoG section of makefile
+     
+test_RtoG.out: RtoG.o
+	 gcc -o test_RtoG.out test_RtoG.o RtoG.o -I ./RtoG.h -lm
+
+test_RtoG.o: test_RtoG.c
+	 gcc -c test_RtoG.c  -I ./RtoG.h
+
+RtoG.o: RtoG.c 
+	 gcc -c RtoG.c -I. RtoG.h
+
+clean:
+	 rm GIS2Radar.o RtoG.o  mainflux.out
+```
+
+#### Using this Makefile one can create executables of test test_RtoG.out and test_GIS2Radar.out
+
+**Build of test_GIS2Radar.out **
 
 ```
-[userdir]$ make coord_trans
+[userdir]$ make GIS2Radar.o
+```
+
+```
+[userdir]$ make test_GIS2Radar.o
+```
+```
+[userdir]$ make test_GIS2Radar.out
 ```
 ### Run executable
 ```
-[userdir]$./coord_trans.out
+[userdir]$./test_GIS2Radar.out
 ```
-After the run we got the following output 
+Program will ask you to input nessessary information on the consol.
+
+The example of input GIS Coordinates and output of Radar Coordinates is shown below
+
 ```
-glonInit= 75.000000
-glatInit= 37.000000
-glonFinal= 66.000000
-glatFinal= 18.000000
-2288.663608
-205.036783
-glonFinal= 66.000000
-glatFinal= 18.000000
+[vmakhin@localhost Assessment_Coordinate_Transformation]$ ./test_GIS2Radar.out
+Initial Point GIS coordinates (latitude and longitude):
+Input value of latitude at Initial Location(in degrees):
+37.
+glatInit= 37.000000 , in degrees
+Input value of longitude at Initial Location(in degrees):
+75.
+glonInit= 75.000000 , in degrees
+Final Point GIS coordinates (latitude and longitude):
+Input value of latitude at Final Location(in degrees):
+18.
+glatFinal= 18.000000 , in degrees
+Input value of longitude at Final Location(in degrees):
+66.
+glonFinal= 66.000000 , in degrees
+range= 2288.663608 , in km
+bearing= 205.036783 , in degrees
+[vmakhin@localhost Assessment_Coordinate_Transformation]$
 ```
 
 **I tried to compare my results with Ref1 using provided for this task coordinates
