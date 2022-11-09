@@ -8,4 +8,8 @@
 
 The result is shown on Fig.1
 
-<img src="assessment_convolution.png"  alt="drawing"  width="400"  height="400"/> 
+<img src="assessment_convolution.png"  alt="drawing"  width="200"  height="200"/> 
+
+The result is shown attempt to find edge detector filter on Fig.2
+
+<img src="assessment_convolution2.png"  alt="drawing"  width="200"  height="200"/> 
