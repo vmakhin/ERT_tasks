@@ -32,6 +32,9 @@ $\frac{\partial \rho v}{\partial t} + \frac{\partial (\rho v v)}{\partial x} = 0
 
 ### To solve this system of equations using flux-correction method I went through several publications [1],[2],[3],[4]
 
+<img src="flux_corrected_transport.png"  alt="drawing"  width="800"  height="400"/> 
+
+
 #### I created Makefile (included in the folder):
 
 ```
