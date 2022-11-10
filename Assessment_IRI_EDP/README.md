@@ -13,7 +13,7 @@
       
 ###### How users can get started with the project? 
       
-> We created a set of scripts which allows users  **download necessary files, compile them, link and create excecutables** 
+> I created a set of scripts which allows users  **download necessary files, compile them, link and create excecutables** 
       
 ###### System Requirements 
       
