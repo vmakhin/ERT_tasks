@@ -76,7 +76,7 @@ The implemented solution is based of spherical shape of the Earth which gives ac
 
 I used existing JavaScript implementation of coordinate transformations to create C functions [2].
 
-To transform GIS to the radar coordinates we created two functions in C: GIS2Radar.c and RtoG.c
+To transform GIS to the radar coordinates I created two functions in C: GIS2Radar.c and RtoG.c
 
 Using the required parameters (Initial: Wallops Islands, lat: 37N, long: 75W) 
 
