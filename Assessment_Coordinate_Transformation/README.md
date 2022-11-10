@@ -78,9 +78,9 @@ I used existing JavaScript implementation of coordinate transformations to creat
 
 To transform GIS to the radar coordinates I created two functions in C: GIS2Radar.c and RtoG.c
 
-Using the required parameters (Initial: Wallops Islands, lat: 37N, long: 75W) 
+we can calculate coordinates of the transformation from GIS to radar and radar to GIS using the required parameters (Initial: Wallops Islands, lat: 37N, long: 75W) 
 
-Final: Puerto Rico, lat: long: 18N, 66W)) we can calculate coordinates transformation from GIS to radar and radar to GIS
+Final: Puerto Rico, lat: long: 18N, 66W)) 
 
 #### I created Makefile to compile, link and test both functions GIS2Radar and RtoG using two test programs: test_GIS2Radar.c and test_RtoG.c
 
