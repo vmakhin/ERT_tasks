@@ -8,8 +8,8 @@
 
 The result is shown on Fig.1
 
-<img src="assessment_convolution.png"  alt="drawing"  width="200"  height="200"/> 
+<img src="assessment_convolution.png"  alt="drawing"  width="300"  height="200"/> 
 
-The result is shown attempt to find edge detector filter on Fig.2
+On on Fig.2, the result shows an attempt to apply an edge detector filter to both data files 
 
 <img src="assessment_convolution2.png"  alt="drawing"  width="200"  height="200"/> 
