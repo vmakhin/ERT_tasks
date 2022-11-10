@@ -190,7 +190,9 @@ Themens) as described on irimodel.org.
 **This is a limited version of the code to produce EDP (Electron Density Profile)** 
 **for a given time and the location of interest** 
       
-#### An EXAMPLE of OUTPUT is NevsH.png file is in the current folder 
+#### An EXAMPLE of OUTPUT
+
+NevsH.png file is in the current folder 
       
 **The WORK is IN PROGRESS to extend the capabilities of this set of functions and subroutines** 
       
