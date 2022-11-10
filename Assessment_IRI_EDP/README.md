@@ -4,7 +4,7 @@
       
 ##### What the project does? 
       
-> Creates a C-based modeling and simulation program that drives IRI model Fortran code. C Modeling interface captures and generates DEP (Electron Density Profile) for a given time and location of interest. 
+> Creates a C-based modeling and simulation program that drives IRI model Fortran code. C Modeling interface captures and generates EDP (Electron Density Profile) for a given time and location of interest. 
       
 ###### Why the project is useful? 
       
