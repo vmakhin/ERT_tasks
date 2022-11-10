@@ -72,7 +72,7 @@ $d\ =\  2r\ \arcsin(  \sqrt{\sin^2(\frac {\varphi _2-\varphi _1}{2}) + \cos(\var
 
 #### I used the assumption that Earth's shape is spheroidal with radius = 6371e3 m ( in case of elipsoidal Earth such model calculations are  more complicated [4]).
 
-Implemented solution is based of spherical shape of the Earth which gives according to Ref.1 0.5% of error.
+The implemented solution is based of spherical shape of the Earth which gives according to Ref.1 0.5% of error.
 
 I used existing JavaScript implementation of coordinate transformations to create C functions [2].
 
