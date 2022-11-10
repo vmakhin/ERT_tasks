@@ -195,8 +195,7 @@ Themens) as described on irimodel.org.
 **The WORK is IN PROGRESS to extend the capabilities of this set of functions and subroutines** 
       
 **As a Result of This project** 
-     We created tar file with all script files to build IRI2016 model 
-      
+     I created set of scripts, Makefile file to build IRI2016 model       
      and produce a chart of  Electron Number Density vs Altitude from 60 to 600 km. 
       
 **The users can get help with their projects sending email to:** 
